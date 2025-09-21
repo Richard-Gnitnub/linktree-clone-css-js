@@ -8,7 +8,6 @@ body {
     flex-direction: column;
     width: 100vw;
     font-family: Verdana, Tahoma, sans-serif;
-    font-size: 16px;
 }
 
 header {
@@ -50,6 +49,7 @@ h1 {
 a {
     text-decoration: none;
     color: rgb(240,240,240);
+    font-size: 100px;
 }
 
 .tile {
