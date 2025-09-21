@@ -42,7 +42,7 @@ header {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 30px;
 }
 
@@ -58,7 +58,7 @@ a {
     border-radius: 17px;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .tile:hover {
