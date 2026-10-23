@@ -26,10 +26,8 @@ test('the ticket offers valid local downloads without JavaScript', async () => {
     const data = await readFile(new URL('../' + path, import.meta.url));
     if (path.endsWith('.png')) {
       assert.deepEqual(data.subarray(0, 8), Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
-      const preview = section.match(/width="(\d+)" height="(\d+)"/);
-      assert.ok(preview);
-      assert.equal(data.readUInt32BE(16), Number(preview[1]));
-      assert.equal(data.readUInt32BE(20), Number(preview[2]));
+      assert.equal(data.readUInt32BE(16), 1920, 'the downloadable ticket keeps its print resolution');
+      assert.equal(data.readUInt32BE(20), 840, 'the downloadable ticket keeps its 160 x 70 mm aspect ratio');
     } else {
       assert.equal(data.subarray(0, 5).toString(), '%PDF-');
     }

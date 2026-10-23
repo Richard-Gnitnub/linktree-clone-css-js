@@ -275,56 +275,212 @@ a:focus-visible, button:focus-visible {
 .project-link:hover { background: #0e2c57; }
 
 .sharing-ticket {
-  margin: 0 2.25rem 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
+  --ticket-red: #ad302b;
+  --ticket-paper: #fff8e4;
+  --ticket-stamp: #59456d;
+  width: min(calc(100% - 4.5rem), 29rem);
+  margin: 0 auto 2.8rem;
+  border: 1px solid var(--ticket-red);
+  background: var(--ticket-paper);
+  color: var(--ticket-red);
+  box-shadow: 3px 4px 0 rgb(89 69 109 / 10%);
 }
 
-.ticket-intro {
-  margin: 0.8rem 0 1.25rem;
-  color: var(--muted);
-  font-size: 0.9rem;
+.sharing-ticket .ticket-header {
+  position: relative;
+  overflow: hidden;
+  padding: 1.1rem 6rem 1.15rem 1.4rem;
+  background: var(--ticket-red);
+  color: var(--ticket-paper);
 }
 
-.ticket-preview {
-  display: block;
-  width: 100%;
-  height: auto;
+.sharing-ticket .ticket-issuer {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
 }
 
-.ticket-actions {
+.sharing-ticket .ticket-service {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.sharing-ticket .ticket-return {
+  position: absolute;
+  top: 1.2rem;
+  right: -2.4rem;
+  width: 9rem;
+  border-bottom: 2px solid currentColor;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  transform: rotate(45deg);
+}
+
+.sharing-ticket .ticket-destination {
+  padding: 1.25rem 1.4rem 1.5rem;
+  border-bottom: 2px solid var(--ticket-red);
+}
+
+.sharing-ticket .section-reference {
+  margin-bottom: 0.9rem;
+  color: var(--ticket-red);
+  font-size: 0.65rem;
+}
+
+.sharing-ticket h2 {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 1.15rem;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: clamp(1.6rem, 5vw, 2.15rem);
+  letter-spacing: -0.035em;
 }
 
-.ticket-download {
-  display: inline-flex;
+.sharing-ticket .ticket-to {
+  flex: none;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+.sharing-ticket .ticket-owner {
+  margin: 0.65rem 0 0 1.75rem;
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.sharing-ticket .ticket-intro {
+  margin: 0;
+  padding: 0.85rem 1.4rem;
+  border-bottom: 2px solid var(--ticket-red);
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.sharing-ticket .ticket-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11rem;
+  border-bottom: 1px solid var(--ticket-red);
+}
+
+.sharing-ticket .ticket-fields {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 1.2rem 1.4rem;
+}
+
+.sharing-ticket dt,
+.sharing-ticket .ticket-field-label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.sharing-ticket dd {
+  margin: 0.2rem 0 0;
+  color: var(--ticket-stamp);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
+}
+
+.sharing-ticket .ticket-scan {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  min-height: 44px;
-  padding: 0.65rem 1rem;
-  border: 1px solid var(--rail-blue);
-  background: var(--rail-blue);
-  color: #fff;
-  font-size: 0.85rem;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.9rem;
+  border-left: 1px solid var(--ticket-red);
+}
+
+.sharing-ticket .ticket-qr {
+  display: block;
+  width: 100%;
+  max-width: 9rem;
+  height: auto;
+  aspect-ratio: 1;
+  background: #fff;
+}
+
+.sharing-ticket figcaption {
+  font-size: 0.75rem;
   font-weight: 700;
+}
+
+.sharing-ticket .ticket-address { padding: 0.85rem 1.4rem 1rem; }
+
+.sharing-ticket .ticket-url {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: var(--ticket-stamp);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.sharing-ticket .ticket-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 2px solid var(--ticket-red);
+  border-bottom: 2px solid var(--ticket-red);
+}
+
+.sharing-ticket .ticket-download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 80px;
+  padding: 0.9rem 1.4rem;
+  color: var(--ticket-red);
   text-decoration: none;
 }
 
-.ticket-download:hover { background: #0e2c57; }
-.ticket-download-print { background: transparent; color: var(--rail-blue); }
-.ticket-download-print:hover { background: #e7ebee; }
-.ticket-download:focus-visible { outline: 3px solid var(--rail-red); outline-offset: 3px; }
-.ticket-download span { font-weight: 400; }
+.sharing-ticket .ticket-download + .ticket-download { border-left: 1px solid var(--ticket-red); }
 
-.ticket-note {
-  margin: 0.8rem 0 0;
-  color: var(--muted);
-  font-size: 0.75rem;
+.sharing-ticket .ticket-download-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sharing-ticket .ticket-download-format { font-size: 0.7rem; }
+
+.sharing-ticket .ticket-download:hover {
+  background: var(--ticket-red);
+  color: var(--ticket-paper);
+}
+
+.sharing-ticket a:focus-visible { outline: 3px solid var(--rail-blue); outline-offset: 3px; }
+.sharing-ticket .ticket-download:focus-visible { outline-offset: -6px; }
+.sharing-ticket .ticket-download:hover:focus-visible { outline-color: var(--ticket-paper); }
+
+.sharing-ticket .ticket-note {
+  margin: 0;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.72rem;
   line-height: 1.6;
+}
+
+.sharing-ticket .ticket-footer {
+  padding: 0.7rem 1.4rem;
+  background: var(--ticket-red);
+  color: var(--ticket-paper);
+  font-size: 0.9rem;
+  text-align: right;
 }
 
 .footer {
@@ -361,15 +517,26 @@ a:focus-visible, button:focus-visible {
   .copy-button { padding: 0.55rem 0.18rem; font-size: 0.65rem; }
   .featured-project { margin: 0 1rem 2rem; padding: 1.1rem; }
   .project-link { width: 100%; justify-content: space-between; }
-  .sharing-ticket { margin: 0 1rem 2rem; }
-  .ticket-actions { gap: 0.5rem; }
-  .ticket-download { flex: 1 1 9rem; }
+  .sharing-ticket { width: calc(100% - 2rem); max-width: 29rem; margin: 0 auto 2rem; }
+  .sharing-ticket .ticket-details { grid-template-columns: minmax(0, 1fr) 9.5rem; }
+  .sharing-ticket .ticket-fields { padding: 1.1rem; }
+  .sharing-ticket .ticket-scan { padding: 0.6rem; }
+  .sharing-ticket .ticket-download { padding: 0.9rem 1rem; }
   .footer { padding: 1rem; }
 }
 
 @media (max-width: 350px) {
   h1 { font-size: 1.8rem; }
   .avatar { width: 60px; height: 60px; }
+  .sharing-ticket .ticket-header { padding-left: 1rem; }
+  .sharing-ticket .ticket-destination,
+  .sharing-ticket .ticket-intro,
+  .sharing-ticket .ticket-address,
+  .sharing-ticket .ticket-note { padding-left: 1rem; padding-right: 1rem; }
+  .sharing-ticket .ticket-details { grid-template-columns: minmax(0, 1fr) 8rem; }
+  .sharing-ticket .ticket-fields { padding: 1rem 0.8rem; }
+  .sharing-ticket dd { font-size: 0.95rem; }
+  .sharing-ticket .ticket-download { padding: 0.8rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -91,17 +91,46 @@
       </section>
 
       <section class="sharing-ticket" aria-labelledby="ticket-title">
-        <p class="section-reference">Platform 3 / Take a ticket</p>
-        <h2 id="ticket-title">A ticket to the workbench</h2>
+        <header class="ticket-header">
+          <p class="ticket-issuer">Ellenfoot</p>
+          <p class="ticket-service">Online destinations</p>
+          <span class="ticket-return" aria-hidden="true">Return</span>
+        </header>
+        <div class="ticket-destination">
+          <p class="section-reference">Platform 3 / Take a ticket</p>
+          <h2 id="ticket-title"><span class="ticket-to">To</span> The workbench</h2>
+          <p class="ticket-owner">Cumbrian Railway Modeller</p>
+        </div>
         <p class="ticket-intro">Keep the links handy. Save a ticket to your phone or print a few for your layout.</p>
-        <img class="ticket-preview" src="assets/sharing-ticket.png"
-          alt="Railway-style sharing ticket with the Ellenfoot sign, website address and a QR code linking to Cumbrian Railway Modeller."
-          width="1920" height="840" loading="lazy" decoding="async">
+        <div class="ticket-details">
+          <dl class="ticket-fields">
+            <div><dt>From</dt><dd>Ellenfoot</dd></div>
+            <div><dt>Via</dt><dd>Blog &amp; projects</dd></div>
+            <div><dt>Valid</dt><dd>Every visit</dd></div>
+          </dl>
+          <figure class="ticket-scan">
+            <img class="ticket-qr" src="assets/sharing-ticket-qr.svg"
+              alt="QR code for the Cumbrian Railway Modeller website; the address is written below."
+              width="256" height="256" loading="lazy" decoding="async">
+            <figcaption>Scan to visit</figcaption>
+          </figure>
+        </div>
+        <div class="ticket-address">
+          <p class="ticket-field-label">Destination address</p>
+          <a class="ticket-url" href="https://richard-gnitnub.github.io/linktree-clone-css-js/">richard-gnitnub.github.io/<wbr>linktree-clone-css-js/</a>
+        </div>
         <div class="ticket-actions">
-          <a class="ticket-download" href="assets/sharing-ticket.png" download="Cumbrian-Railway-Modeller-ticket.png">Save ticket <span>(PNG)</span></a>
-          <a class="ticket-download ticket-download-print" href="assets/sharing-ticket.pdf" download="Cumbrian-Railway-Modeller-print-sheet.pdf">Print sheet <span>(PDF)</span></a>
+          <a class="ticket-download" href="assets/sharing-ticket.png" download="Cumbrian-Railway-Modeller-ticket.png">
+            <span class="ticket-download-title">Save ticket <span aria-hidden="true">↓</span></span>
+            <span class="ticket-download-format">PNG / For your phone</span>
+          </a>
+          <a class="ticket-download" href="assets/sharing-ticket.pdf" download="Cumbrian-Railway-Modeller-print-sheet.pdf">
+            <span class="ticket-download-title">Print sheet <span aria-hidden="true">↓</span></span>
+            <span class="ticket-download-format">PDF / Three tickets</span>
+          </a>
         </div>
         <p class="ticket-note">The QR code opens this website. The A4 print sheet contains three 160 &times; 70 mm tickets. Print at 100% or Actual size.</p>
+        <footer class="ticket-footer">Keep for your next visit</footer>
       </section>
     </main>
 
