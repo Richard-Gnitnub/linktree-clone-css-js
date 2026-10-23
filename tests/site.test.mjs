@@ -28,3 +28,8 @@ test('all listed destinations are HTTPS links with separate copy controls', () =
     assert.match(row, /type="button" data-copy aria-label="Copy [^"]+ link"/);
   }
 });
+
+test('TrackTemplate has a separate featured section with a direct repository link', () => {
+  assert.match(html, /<section class="featured-project" aria-labelledby="tracktemplate-title">/);
+  assert.match(html, /href="https:\/\/github\.com\/Richard-Gnitnub\/tracktemplate"/);
+});
