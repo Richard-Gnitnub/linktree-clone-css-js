@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest a useful addition to the railway-themed link page.
+labels: ["enhancement"]
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the idea, who it helps and how we will know it works.
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      description: What would you like to add or change?
+      placeholder: A short, specific description
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Visitor benefit
+      description: Who would use this, and what would it help them do?
+    validations:
+      required: true
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Proposed behaviour
+      description: Describe what visitors should see or do. Note any important limits.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Give 3–5 observable outcomes that would show the feature works.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Content and dependencies
+      description: List required text, images, URLs or decisions. Say what is still missing, or write "None known".
+    validations:
+      required: false
