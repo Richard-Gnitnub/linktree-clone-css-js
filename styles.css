@@ -48,19 +48,6 @@ button { font: inherit; }
   color: #fff;
 }
 
-.masthead-top {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  padding: 0.8rem 2.25rem;
-  border-bottom: 1px solid rgb(255 255 255 / 35%);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
 .masthead-content {
   display: flex;
   align-items: center;
@@ -268,7 +255,6 @@ a:focus-visible, button:focus-visible {
     box-shadow: none;
   }
 
-  .masthead-top { padding: 0.8rem 1.15rem; }
   .masthead-content { gap: 0.9rem; padding: 2rem 1.15rem; }
   .avatar { width: 76px; height: 76px; border-width: 3px; }
   .strapline { font-size: 0.82rem; }
