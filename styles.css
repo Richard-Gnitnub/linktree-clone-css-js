@@ -235,6 +235,45 @@ a:focus-visible, button:focus-visible {
   font-size: 0.82rem;
 }
 
+.featured-project {
+  margin: 0 2.25rem 2.8rem;
+  padding: 1.5rem;
+  border-top: 6px solid var(--rail-blue);
+  background: #f0eee5;
+}
+
+.featured-project-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.featured-project h2 { margin-bottom: 0.65rem; }
+
+.featured-project-content p {
+  max-width: 29rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--rail-blue);
+  color: white;
+  font-size: 0.83rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-link:hover { background: #0e2c57; }
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -267,6 +306,8 @@ a:focus-visible, button:focus-visible {
   .service-name { font-size: 1.2rem; }
   .service-detail { font-size: 0.72rem; }
   .copy-button { padding: 0.55rem 0.18rem; font-size: 0.65rem; }
+  .featured-project { margin: 0 1rem 2rem; padding: 1.1rem; }
+  .project-link { width: 100%; justify-content: space-between; }
   .footer { padding: 1rem; }
 }
 
