@@ -23,19 +23,25 @@ GitHub Actions also runs these checks for pull requests.
 
 ## Railway sharing ticket
 
-The Take a ticket section offers a PNG for sharing and an A4 PDF with three
-160 x 70 mm tickets and cutting marks. Both files include the Ellenfoot sign,
-a readable website address and a QR code pointing to the published website.
-The downloads work without JavaScript or an external QR-code service.
+The Take a ticket section uses cream and red railway ticket styling with
+live text, a QR code and download links. It offers a 1920 x 840 PNG for sharing
+and an A4 PDF with three 160 x 70 mm landscape tickets and cutting marks.
+The downloads match the section's colours and ruled panels, and include the
+original Ellenfoot sign, a readable website address and a QR code pointing to
+the published website. They work without JavaScript or an external QR service.
 
 The single source for the ticket destination is the canonical link in
 `index.html`. The generator never takes the address from a preview or the
 visitor's current browser URL. If the published address or artwork changes,
-regenerate both files and scan-check their QR codes before committing:
+regenerate the PNG, PDF and on-page QR SVG, then scan-check their QR codes
+before committing:
 
 ```sh
 python3 scripts/generate_ticket.py
 ```
+
+The generator creates `assets/sharing-ticket-qr.svg` with the same QR generator
+as the downloads, with a white background and a four-module quiet zone.
 
 Regeneration requires ReportLab, Pillow and Poppler (`pdftoppm`). These are
 authoring tools only; the website still needs no build step or dependencies.
