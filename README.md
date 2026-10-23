@@ -49,6 +49,32 @@ Install the Python packages in a virtual environment with
 `python3 -m pip install reportlab Pillow`, and install Poppler using your
 system package manager. Print the PDF at 100% or Actual size.
 
+## Browser identity and social sharing
+
+A small code-drawn mark derived from the Ellenfoot sign supplies the SVG
+favicon, the ICO's 16, 32 and 48 pixel sizes, and a 180 pixel Apple touch icon.
+The 1200 x 630 sharing card uses the original sign artwork and the site's
+colours without changing the source image.
+
+Regenerate these assets with:
+
+```sh
+python3 scripts/generate_brand_assets.py
+```
+
+This uses the same ReportLab, Pillow and Poppler authoring tools as the ticket
+generator. Check the small icons against light and dark browser backgrounds
+and inspect the sharing card after regeneration.
+
+The favicon links use relative paths for the GitHub Pages project directory.
+Open Graph and social card metadata in `index.html` use the published HTTPS
+page and image addresses, including descriptive image alternative text. If
+the published address changes, update these addresses and the canonical link.
+
+New sharing artwork becomes available at its published URL after merge and
+GitHub Pages deployment. Social platforms manage their own preview caches,
+so an existing preview may take time to refresh.
+
 ## Feature requests
 
 Use **New issue > Feature request** to describe the visitor benefit, proposed
