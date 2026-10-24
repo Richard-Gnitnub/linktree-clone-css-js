@@ -679,7 +679,13 @@ a:focus-visible, button:focus-visible {
   .parcels-office { margin: 0 1rem 2rem; }
   .parcels-office .parcels-sign { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
   .parcels-office .parcels-brand { min-width: 0; align-content: center; padding: 0.75rem 0.5rem; }
-  .parcels-office .parcels-brand p { font-size: clamp(1rem, 4.5vw, 1.4rem); text-align: center; }
+  .parcels-office .parcels-brand p {
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
   .parcels-office .parcels-heading { min-width: 0; padding: 1rem 0.75rem; overflow-wrap: anywhere; }
   .parcels-office .section-reference { font-size: 0.65rem; }
   .parcels-office .parcels-intro { padding: 1rem; }
