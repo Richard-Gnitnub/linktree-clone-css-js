@@ -3,11 +3,12 @@
   <rect width="208" height="104" fill="#ffe630"/>
   <defs>
     <path id="star" d="M55 4 67 40 106 40 75 62 87 100 55 77 23 100 35 62 4 40 43 40Z"/>
+    <path id="trail" d="M55 4 67 40H43Z M79 40H106L75 62 87 100 55 77 48 62Z"/>
   </defs>
   <g fill="#b91e23" stroke="#ffe630" stroke-width="5" stroke-linejoin="miter">
-    <use href="#star" x="96"/>
-    <use href="#star" x="64"/>
-    <use href="#star" x="32"/>
+    <use href="#trail" x="96"/>
+    <use href="#trail" x="64"/>
+    <use href="#trail" x="32"/>
     <use href="#star"/>
   </g>
   <path d="M8 8 14 8 22 12 29 12 29 14 22 14 15 18 29 18 29 20 15 20 24 24 18 24 10 20 3 20 3 18 10 18 17 14 3 14 3 12 17 12Z"
