@@ -49,6 +49,29 @@ Install the Python packages in a virtual environment with
 `python3 -m pip install reportlab Pillow`, and install Poppler using your
 system package manager. Print the PDF at 100% or Actual size.
 
+## Parcels office
+
+Platform 4 is a static catalogue of useful guides and finished downloads. Its
+yellow and red sign uses a code-drawn Red Star parcels mark in
+`assets/red-star-parcels.svg`, with live heading text and the site's existing
+typefaces. The supplied signage sheet is a visual reference, not a bundled
+site asset.
+
+The initial catalogue links to Rich B Modeller's published
+[FreeCAD bevel-gear guide](https://richbmodeller.com/blogs/news/freecad) and the
+two sharing-ticket files described above. The guide opens its original page;
+the PNG and PDF links download the local files. Source links lead to the ticket
+generator. All entries work without JavaScript.
+
+To add a resource, edit the `parcel-list` in `index.html`. Give it a clear name,
+short description, format and any relevant printing, scale or software details.
+Use a maintained file, release or guide URL, and label the action to match:
+**Download PDF** for a file, **Read guide** or **View releases** for a page.
+Only use the `download` attribute for local files. Include version, compatibility
+and licence information when the source provides it; do not guess missing
+details or list unfinished resources. The current resources have no supplied
+version or explicit reuse licence, so no such claims appear in the catalogue.
+
 ## Browser identity and social sharing
 
 A small code-drawn mark derived from the Ellenfoot sign supplies the SVG
